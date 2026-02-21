@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kryptowährung-Plattform | Einnahmen jetzt</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2196f3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #1976d2;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1517139320321-61250f854f7e?auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            background-color: #ff4081;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #e9006e;
+        }
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #2196f3;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .form-container button:hover {
+            background-color: #1976d2;
+        }
+        footer {
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .hidden {
+            display: none;
+        }
+        #mining-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+        }
+        #mining-container img {
+            width: 200px;
+            height: 200px;
+        }
+        #mining-container p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        #mining-container button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kryptowährung-Plattform | Einnahmen jetzt</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Startseite</a>
+        <a href="#about">Über uns</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Starte jetzt mit Kryptowährung Mining</h1>
+        <p>Erhalte sofort Einnahmen durch Kryptowährung-Mining – ohne Anmeldung!</p>
+        <button class="cta-button" onclick="startMining()">Starten</button>
+    </section>
+
+    <section class="section" id="about">
+        <h2>Über uns</h2>
+        <p>
+            Wir sind ein Team von Kryptowährung-Experten, die Ihnen helfen, schnell und einfach mit Kryptowährung-Mining zu beginnen. Unsere Technologie ermöglicht es Ihnen, Kryptowährung auf Ihrem PC oder Laptop zu generieren – ohne Anmeldung oder hohe Kosten.
+        </p>
+        <p>
+            Mit unserem System können Sie in Minuten Einnahmen generieren. Es ist einfach, sicher und perfekt für alle, die in der Welt der Kryptowährung einsteigen möchten.
+        </p>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Kontakt</h2>
+        <p>
+            Wenn Sie Fragen haben oder weitere Informationen benötigen, kontaktieren Sie uns gerne! Wir sind immer für Sie da und beraten Sie gerne.
+        </p>
+        <p>
+            E-Mail: info@kryptowährung-mining.de
+
+            Telefon: +49 123 456 789
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2025 Kryptowährung Mining – Alle Rechte vorbehalten</p>
+    </footer>
+
+    <div id="mining-container">
+        <img src="https://i.imgur.com/3x7qZ7E.png" alt="Mining">
+        <p>Dein Browser wird jetzt mit Kryptowährung-Mining beauftragt.</p>
+        <button onclick="closeMining()">Schließen</button>
+    </div>
+
+    <div class="form-container" id="payment-form">
+        <h2>Deine Einzahlung</h2>
+        <p>Bitte gib die Menge an, die du einzahlen möchtest:</p>
+        <form id="payment-form">
+            <input type="number" id="amount" placeholder="Einzahlungsbetrag (in USD)" required>
+            <select id="currency">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="ETH">Ethereum (ETH)</option>
+                <option value="USDT">Tether (USDT)</option>
+            </select>
+            <button type="button" onclick="sendPayment()">Einzahlen</button>
+        </form>
+    </div>
+
+    <script>
+        function startMining() {
+            document.getElementById("mining-container").style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeMining() {
+            document.getElementById("mining-container").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        function sendPayment() {
+            const amount = document.getElementById("amount").value;
+            const currency = document.getElementById("currency").value;
+            const wallet = "YOUR_WALLET_ADDRESS"; // Deine Wallet-Adresse hier eintragen
+            const transaction = {
+                amount: amount,
+                currency: currency,
+                to: wallet
+            };
+
+            // Simuliere die Einzahlung
+            alert("Deine Einzahlung wurde bestätigt! Die " + currency + " werden auf deine Wallet-Adresse " + wallet + " gesendet.");
+            document.getElementById("payment-form").classList.add("hidden");
+            document.getElementById("mining-container").style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+
+        // Automatisch starten, wenn die Seite geladen ist
+        window.onload = function() {
+            startMining();
+        };
+    </script>
+
+</body>
+</html>
