@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MinerCoin Mining</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    nav button {
+      padding: 0.5rem 1rem;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contract {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #0077cc;
+    }
+
+    .contract h3 {
+      color: #0077cc;
+    }
+
+    .contract button {
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .contract button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    code {
+      color: #0077cc;
+      font-family: monospace;
+    }
+
+    img {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <button onclick="window.location.href='index.html'">Start</button>
+      <button onclick="window.location.href='login.html'">Anmelden</button>
+      <button onclick="window.location.href='contracts.html'">Mining Contracts</button>
+    </nav>
+    <h1>MinerCoin Mining</h1>
+    <p>Erhalten Sie bis zu <strong>150%</strong> Monatliche Rendite mit unserem Mining-System.</p>
+  </header>
+
+  <section>
+    <h2>Wählen Sie einen Contract</h2>
+    <p>Erhalten Sie bis zu <strong>150%</strong> Monatliche Rendite mit unserem Mining-System.</p>
+    <button onclick="window.location.href='contracts.html'">Zur Vertragseite</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MinerCoin Mining. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <!-- Anmeldung -->
+  <div id="login" style="display:none;">
+    <h2>Anmeldung</h2>
+    <form id="login-form">
+      <label for="email">E-Mail:</label>
+      <input type="email" id="email" required />
+
+      <label for="password">Passwort:</label>
+      <input type="password" id="password" required />
+
+      <button type="submit">Anmelden</button>
+    </form>
+    <p id="login-message"></p>
+  </div>
+
+  <!-- Verträge -->
+  <div id="contracts" style="display:none;">
+    <h2>Verträge</h2>
+    <div class="contract">
+      <h3>Contract 1: 50€</h3>
+      <p>Monatliche Rendite: <strong>10%</strong></p>
+      <p>Vertragsschluss: <strong>1 Monat</strong></p>
+      <button onclick="window.location.href='success.html'">Kauf</button>
+    </div>
+
+    <div class="contract">
+      <h3>Contract 2: 150€</h3>
+      <p>Monatliche Rendite: <strong>40%</strong></p>
+      <p>Vertragsschluss: <strong>1 Monat</strong></p>
+      <button onclick="window.location.href='success.html'">Kauf</button>
+    </div>
+
+    <div class="contract">
+      <h3>Contract 3: 500€</h3>
+      <p>Monatliche Rendite: <strong>48-72%</strong></p>
+      <p>Vertragsschluss: <strong>1 Monat</strong></p>
+      <button onclick="window.location.href='success.html'">Kauf</button>
+    </div>
+
+    <div class="contract">
+      <h3>Contract 4: 1000€</h3>
+      <p>Monatliche Rendite: <strong>150%</strong></p>
+      <p>Vertragsschluss: <strong>1 Monat</strong></p>
+      <button onclick="window.location.href='success.html'">Kauf</button>
+    </div>
+  </div>
+
+  <!-- Bestätigung -->
+  <div id="success" style="display:none;">
+    <h2>Dein Vertrag wurde bestätigt!</h2>
+    <p>Die Rendite wird in Kürze an deine Wallet-Adresse gesendet.</p>
+    <p><strong>Wallet-Adresse:</strong> <code>3JvX4qB1g8s7T9kLmNpRqWxYzA1B2C3D4E5F6G7H8I9J0K</code></p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Bitcoin.svg" alt="Bitcoin Logo" style="width: 100px; height: auto;" />
+  </div>
+
+  <script>
+    // Anmeldung
+    document.getElementById("login-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("login-message");
+
+      if (email && password) {
+        message.textContent = "E-Mail und Passwort wurden bestätigt!";
+        message.style.color = "green";
+        document.getElementById("login").style.display = "none";
+        document.getElementById("contracts").style.display = "block";
+      } else {
+        message.textContent = "E-Mail oder Passwort leer!";
+        message.style.color = "red";
+      }
+    });
+
+    // Verträge
+    document.querySelectorAll(".contract button").forEach(button => {
+      button.addEventListener("click", function() {
+        document.getElementById("contracts").style.display = "none";
+        document.getElementById("success").style.display = "block";
+      });
+    });
+  </script>
+</body>
+</html>
